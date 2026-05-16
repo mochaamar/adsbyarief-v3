@@ -7,6 +7,132 @@ const WA_LINK = 'https://wa.me/6285602298057';
 const MENTORING_GENERAL_BENEFIT =
   'Fasilitas Umum (Periode 1 Bulan): Sesi privat via Google Meet/Zoom, praktik langsung dengan dashboard bisnis Anda sendiri, rekaman sesi pembelajaran, dan akses tanya-jawab via WhatsApp selama periode program berjalan.';
 
+// ─── Platform Logo SVG Components ───────────────────────────────────────────
+
+function TikTokLogo({ size = 40 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Cyan shadow */}
+      <path
+        d="M21 8h5.5v22a5.5 5.5 0 1 1-5.5-5.5V30a1 1 0 1 0 0 2 1 1 0 0 0 0-2v-5.5A10.5 10.5 0 1 0 31.5 35V18.5a16.5 16.5 0 0 0 5.5 1V14a11 11 0 0 1-5.5-1.5V8H26"
+        fill="#69C9D0"
+        opacity="0.9"
+      />
+      {/* Magenta shadow */}
+      <path
+        d="M19 6h5.5v22a5.5 5.5 0 1 1-5.5-5.5V28a1 1 0 1 0 0 2 1 1 0 0 0 0-2v-5.5A10.5 10.5 0 1 0 29.5 33V16.5a16.5 16.5 0 0 0 5.5 1V12a11 11 0 0 1-5.5-1.5V6H24"
+        fill="#EE1D52"
+        opacity="0.9"
+      />
+      {/* White main shape */}
+      <path
+        d="M20 7h5.5v22a5.5 5.5 0 1 1-5.5-5.5V29a1 1 0 1 0 0 2 1 1 0 0 0 0-2v-5.5A10.5 10.5 0 1 0 30.5 34V17.5a16.5 16.5 0 0 0 5.5 1V13a11 11 0 0 1-5.5-1.5V7H25"
+        fill="white"
+      />
+    </svg>
+  );
+}
+
+function ShopeeLogo({ size = 40 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Orange bag */}
+      <rect x="6" y="18" width="36" height="26" rx="4" fill="#EE4D2D" />
+      {/* Bag handle */}
+      <path
+        d="M17 18v-3a7 7 0 0 1 14 0v3"
+        stroke="#EE4D2D"
+        strokeWidth="3"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <path
+        d="M17 18v-3a7 7 0 0 1 14 0v3"
+        stroke="white"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        fill="none"
+        opacity="0.6"
+      />
+      {/* White S */}
+      <text x="24" y="36" textAnchor="middle" fontSize="16" fontWeight="bold" fill="white" fontFamily="Arial, sans-serif">S</text>
+    </svg>
+  );
+}
+
+function MetaLogo({ size = 40 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Meta infinity loop */}
+      <path
+        d="M8 24c0-4.4 2.8-8 7-8 2.5 0 4.5 1.3 6.5 3.8C23.5 17.3 25.5 16 28 16c4.2 0 7 3.6 7 8s-2.8 8-7 8c-2.5 0-4.5-1.3-6.5-3.8C19.5 30.7 17.5 32 15 32c-4.2 0-7-3.6-7-8z"
+        stroke="#0082FB"
+        strokeWidth="3.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M15 16c-4.2 0-7 3.6-7 8s2.8 8 7 8c2.5 0 4.5-1.3 6.5-3.8"
+        stroke="#0082FB"
+        strokeWidth="3.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M28 16c4.2 0 7 3.6 7 8s-2.8 8-7 8c-2.5 0-4.5-1.3-6.5-3.8"
+        stroke="#0082FB"
+        strokeWidth="3.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function AllChannelLogo({ size = 40 }: { size?: number }) {
+  const s = size * 0.38;
+  return (
+    <div className="flex items-center justify-center gap-1" style={{ width: size * 1.6, height: size }}>
+      <TikTokLogo size={s} />
+      <ShopeeLogo size={s} />
+      <MetaLogo size={s} />
+    </div>
+  );
+}
+
+// ─── Mini Sparkline Chart ────────────────────────────────────────────────────
+
+function MiniChart({ color = '#22C55E' }: { color?: string }) {
+  const points = [10, 18, 12, 22, 16, 28, 20, 32, 26, 38];
+  const w = 80, h = 28;
+  const max = Math.max(...points), min = Math.min(...points);
+  const coords = points.map((p, i) => {
+    const x = (i / (points.length - 1)) * w;
+    const y = h - ((p - min) / (max - min)) * h;
+    return `${x},${y}`;
+  });
+  return (
+    <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} fill="none">
+      <polyline
+        points={coords.join(' ')}
+        stroke={color}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+        opacity="0.8"
+      />
+      <polyline
+        points={`0,${h} ${coords.join(' ')} ${w},${h}`}
+        fill={color}
+        opacity="0.12"
+      />
+    </svg>
+  );
+}
+
+// ─── Types ───────────────────────────────────────────────────────────────────
+
 type ModalData = {
   title: string;
   subtitle: string;
@@ -21,7 +147,9 @@ type ModalData = {
 
 type CardItem = {
   title: string;
-  icon: string;
+  iconType: 'tiktok' | 'shopee' | 'meta' | 'allchannel' | 'emoji';
+  emoji?: string;
+  price?: string;
   modal: ModalData;
 };
 
@@ -31,6 +159,8 @@ type Tab = {
   cards: CardItem[];
 };
 
+// ─── Data ────────────────────────────────────────────────────────────────────
+
 const tabs: Tab[] = [
   {
     id: 'ads',
@@ -38,7 +168,8 @@ const tabs: Tab[] = [
     cards: [
       {
         title: 'TikTok Shop Ads',
-        icon: '🎵',
+        iconType: 'tiktok',
+        price: 'Rp 3.000.000/bulan',
         modal: {
           title: 'TikTok Shop Ads',
           subtitle: 'Ads Management',
@@ -50,7 +181,8 @@ const tabs: Tab[] = [
       },
       {
         title: 'Shopee Ads',
-        icon: '🛒',
+        iconType: 'shopee',
+        price: 'Rp 2.000.000/bulan',
         modal: {
           title: 'Shopee Ads',
           subtitle: 'Ads Management',
@@ -62,7 +194,8 @@ const tabs: Tab[] = [
       },
       {
         title: 'CPAS Ads',
-        icon: '🔗',
+        iconType: 'meta',
+        price: 'Rp 3.500.000/bulan',
         modal: {
           title: 'CPAS Ads',
           subtitle: 'Ads Management',
@@ -74,7 +207,8 @@ const tabs: Tab[] = [
       },
       {
         title: 'Meta Ads (Lead Gen)',
-        icon: '📘',
+        iconType: 'meta',
+        price: 'Rp 3.500.000/bulan',
         modal: {
           title: 'Meta Ads (Lead Gen)',
           subtitle: 'Ads Management',
@@ -86,7 +220,8 @@ const tabs: Tab[] = [
       },
       {
         title: 'All Channel',
-        icon: '🌐',
+        iconType: 'allchannel',
+        price: 'Rp 11.000.000/bulan',
         modal: {
           title: 'All Channel',
           subtitle: 'Ads Management',
@@ -103,7 +238,8 @@ const tabs: Tab[] = [
     cards: [
       {
         title: 'Basic Package',
-        icon: '🌱',
+        iconType: 'emoji',
+        emoji: '🌱',
         modal: {
           title: 'Basic Package',
           subtitle: 'Affiliate Management',
@@ -114,7 +250,8 @@ const tabs: Tab[] = [
       },
       {
         title: 'Pro Package',
-        icon: '🚀',
+        iconType: 'emoji',
+        emoji: '🚀',
         modal: {
           title: 'Pro Package',
           subtitle: 'Affiliate Management',
@@ -131,7 +268,7 @@ const tabs: Tab[] = [
     cards: [
       {
         title: 'TikTok Shop Ads',
-        icon: '🎵',
+        iconType: 'tiktok',
         modal: {
           title: 'TikTok Shop Ads',
           subtitle: 'Private Mentoring',
@@ -145,7 +282,7 @@ const tabs: Tab[] = [
       },
       {
         title: 'Shopee Ads',
-        icon: '🛒',
+        iconType: 'shopee',
         modal: {
           title: 'Shopee Ads',
           subtitle: 'Private Mentoring',
@@ -159,7 +296,7 @@ const tabs: Tab[] = [
       },
       {
         title: 'CPAS Ads',
-        icon: '🔗',
+        iconType: 'meta',
         modal: {
           title: 'CPAS Ads',
           subtitle: 'Private Mentoring',
@@ -173,7 +310,7 @@ const tabs: Tab[] = [
       },
       {
         title: 'Meta Ads',
-        icon: '📘',
+        iconType: 'meta',
         modal: {
           title: 'Meta Ads',
           subtitle: 'Private Mentoring',
@@ -189,14 +326,15 @@ const tabs: Tab[] = [
   },
   {
     id: 'consulting',
-    label: 'Strategic Consulting',
+    label: 'Private Consulting',
     cards: [
       {
         title: 'Deep Dive Audit',
-        icon: '🔍',
+        iconType: 'emoji',
+        emoji: '🔍',
         modal: {
           title: 'Deep Dive Audit',
-          subtitle: 'Strategic Consulting',
+          subtitle: 'Private Consulting',
           fee: 'Rp 350.000 / Sesi',
           feeLabel: '90 Menit',
           fasilitas:
@@ -206,6 +344,21 @@ const tabs: Tab[] = [
     ],
   },
 ];
+
+// ─── Card Icon Renderer ──────────────────────────────────────────────────────
+
+function CardIcon({ card }: { card: CardItem }) {
+  if (card.iconType === 'emoji') {
+    return <span className="text-3xl">{card.emoji}</span>;
+  }
+  if (card.iconType === 'tiktok') return <TikTokLogo size={44} />;
+  if (card.iconType === 'shopee') return <ShopeeLogo size={44} />;
+  if (card.iconType === 'meta') return <MetaLogo size={44} />;
+  if (card.iconType === 'allchannel') return <AllChannelLogo size={36} />;
+  return null;
+}
+
+// ─── Modal ───────────────────────────────────────────────────────────────────
 
 function ServiceModal({ card, onClose }: { card: CardItem; onClose: () => void }) {
   const m = card.modal;
@@ -241,7 +394,6 @@ function ServiceModal({ card, onClose }: { card: CardItem; onClose: () => void }
 
         {/* Body */}
         <div className="p-6 space-y-5">
-          {/* General Benefit (Mentoring only) */}
           {m.generalBenefit && (
             <div className="rounded-xl bg-accent/10 border border-accent/20 p-4">
               <p className="text-xs font-700 text-accent mb-1">📋 Fasilitas Umum</p>
@@ -249,7 +401,6 @@ function ServiceModal({ card, onClose }: { card: CardItem; onClose: () => void }
             </div>
           )}
 
-          {/* Fee / Investasi */}
           {isMentoring ? (
             <div className="flex items-center gap-3">
               <span className="text-sm font-600 text-muted-foreground">Investasi:</span>
@@ -266,7 +417,6 @@ function ServiceModal({ card, onClose }: { card: CardItem; onClose: () => void }
             </div>
           )}
 
-          {/* Detail (Mentoring) */}
           {m.detail && (
             <div>
               <p className="text-xs font-700 text-foreground uppercase tracking-wider mb-2">Detail Materi</p>
@@ -274,7 +424,6 @@ function ServiceModal({ card, onClose }: { card: CardItem; onClose: () => void }
             </div>
           )}
 
-          {/* Benefit (Mentoring) */}
           {m.benefit && (
             <div>
               <p className="text-xs font-700 text-foreground uppercase tracking-wider mb-2">Benefit</p>
@@ -282,7 +431,6 @@ function ServiceModal({ card, onClose }: { card: CardItem; onClose: () => void }
             </div>
           )}
 
-          {/* Fasilitas (non-mentoring) */}
           {m.fasilitas && (
             <div>
               <p className="text-xs font-700 text-foreground uppercase tracking-wider mb-2">Detail Fasilitas</p>
@@ -311,11 +459,98 @@ function ServiceModal({ card, onClose }: { card: CardItem; onClose: () => void }
   );
 }
 
+// ─── Ads Management Card (rich) ──────────────────────────────────────────────
+
+function AdsCard({ card, onClick }: { card: CardItem; onClick: () => void }) {
+  const isAllChannel = card.iconType === 'allchannel';
+  return (
+    <button
+      onClick={onClick}
+      className="group relative flex flex-col rounded-2xl border border-border bg-muted overflow-hidden text-left transition-all duration-200 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-1 cursor-pointer"
+      style={{ background: 'linear-gradient(160deg, #0F172A 0%, #1E293B 100%)' }}
+    >
+      {/* Top accent bar */}
+      <div className="h-1 w-full" style={{ background: 'linear-gradient(90deg, #22C55E, #16A34A)' }} />
+
+      {/* Card body */}
+      <div className="flex flex-col flex-1 p-5 gap-3">
+        {/* Icon */}
+        <div className={`flex ${isAllChannel ? 'justify-start' : 'justify-start'} items-center`}>
+          <CardIcon card={card} />
+        </div>
+
+        {/* Title */}
+        <div>
+          <p className="text-sm font-700 text-white group-hover:text-accent transition-colors leading-tight">
+            {card.title}
+          </p>
+          <p className="text-xs text-slate-400 mt-0.5">Ads Management</p>
+        </div>
+
+        {/* Mini chart */}
+        <div className="flex items-end gap-2">
+          <MiniChart color="#22C55E" />
+          <span className="text-xs text-emerald-400 font-600 mb-0.5">↑ ROI</span>
+        </div>
+
+        {/* Price */}
+        {card.price && (
+          <div className="mt-auto">
+            <p className="text-xs text-slate-400 mb-0.5">Mulai dari</p>
+            <p className="text-sm font-800" style={{ color: '#22C55E' }}>{card.price}</p>
+          </div>
+        )}
+      </div>
+
+      {/* Footer */}
+      <div className="px-5 pb-4 flex items-center justify-between border-t border-white/5 pt-3 gap-2">
+        <span className="text-xs text-slate-400 group-hover:text-accent transition-colors">Lihat Detail →</span>
+        <span
+          className="text-xs font-700 px-3 py-1 rounded-full text-white transition-all"
+          style={{ backgroundColor: '#22C55E' }}
+        >
+          Diskusi Gratis
+        </span>
+      </div>
+
+      {/* Hover glow */}
+      <div
+        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        style={{ background: 'radial-gradient(circle at 50% 30%, rgba(34,197,94,0.08) 0%, transparent 70%)' }}
+      />
+    </button>
+  );
+}
+
+// ─── Generic Card (other tabs) ───────────────────────────────────────────────
+
+function GenericCard({ card, onClick }: { card: CardItem; onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className="group relative flex flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-muted p-6 text-center transition-all duration-200 hover:border-accent/50 hover:bg-muted/80 hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-1 cursor-pointer"
+    >
+      <CardIcon card={card} />
+      <span className="text-sm font-700 text-foreground group-hover:text-accent transition-colors">
+        {card.title}
+      </span>
+      <span className="text-xs text-muted-foreground">Lihat Detail →</span>
+      <div
+        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        style={{ background: 'radial-gradient(circle at 50% 50%, rgba(34,197,94,0.06) 0%, transparent 70%)' }}
+      />
+    </button>
+  );
+}
+
+// ─── Main Section ────────────────────────────────────────────────────────────
+
 export default function ServicesSection() {
   const [activeTab, setActiveTab] = useState<string>('ads');
   const [openCard, setOpenCard] = useState<CardItem | null>(null);
 
   const currentTab = tabs.find((t) => t.id === activeTab)!;
+  const isAdsTab = activeTab === 'ads';
 
   return (
     <section id="services" className="py-20 bg-background relative overflow-hidden">
@@ -331,14 +566,14 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="section-label">Layanan & Investasi</span>
+          <span className="section-label">Layanan &amp; Investasi</span>
           <h2 className="text-section-heading text-foreground mt-2">
             Pilih Kolaborasi
             <br />
             <span className="text-accent">Yang Tepat untuk Anda</span>
           </h2>
           <p className="text-muted-foreground text-sm mt-3 max-w-md mx-auto">
-            Klik tab untuk melihat layanan, lalu klik kartu untuk detail lengkap & harga.
+            Klik tab untuk melihat layanan, lalu klik kartu untuk detail lengkap &amp; harga.
           </p>
         </div>
 
@@ -361,35 +596,28 @@ export default function ServicesSection() {
         </div>
 
         {/* Level 2: Cards */}
-        <div
-          className={`grid gap-5 ${
-            currentTab.cards.length === 1
-              ? 'grid-cols-1 max-w-xs mx-auto'
-              : currentTab.cards.length === 2
-              ? 'grid-cols-1 sm:grid-cols-2 max-w-lg mx-auto'
-              : currentTab.cards.length === 4
-              ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' :'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5'
-          }`}
-        >
-          {currentTab.cards.map((card) => (
-            <button
-              key={card.title}
-              onClick={() => setOpenCard(card)}
-              className="group relative flex flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-muted p-6 text-center transition-all duration-200 hover:border-accent/50 hover:bg-muted/80 hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-1 cursor-pointer"
-            >
-              <span className="text-3xl">{card.icon}</span>
-              <span className="text-sm font-700 text-foreground group-hover:text-accent transition-colors">
-                {card.title}
-              </span>
-              <span className="text-xs text-muted-foreground">Lihat Detail →</span>
-              {/* Hover glow */}
-              <div
-                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{ background: 'radial-gradient(circle at 50% 50%, rgba(34,197,94,0.06) 0%, transparent 70%)' }}
-              />
-            </button>
-          ))}
-        </div>
+        {isAdsTab ? (
+          <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {currentTab.cards.map((card) => (
+              <AdsCard key={card.title} card={card} onClick={() => setOpenCard(card)} />
+            ))}
+          </div>
+        ) : (
+          <div
+            className={`grid gap-5 ${
+              currentTab.cards.length === 1
+                ? 'grid-cols-1 max-w-xs mx-auto'
+                : currentTab.cards.length === 2
+                ? 'grid-cols-1 sm:grid-cols-2 max-w-lg mx-auto'
+                : currentTab.cards.length === 4
+                ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' :'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5'
+            }`}
+          >
+            {currentTab.cards.map((card) => (
+              <GenericCard key={card.title} card={card} onClick={() => setOpenCard(card)} />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Level 3: Modal */}
