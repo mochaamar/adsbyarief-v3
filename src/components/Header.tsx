@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import AppLogo from '@/components/ui/AppLogo';
+import AppImage from '@/components/ui/AppImage';
 
 const WA_LINK = 'https://wa.me/6285602298057';
 
@@ -40,13 +40,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <AppLogo
-            size={32}
+          <AppImage
+            src="/assets/images/Gemini_Generated_Image_f3ybd8f3ybd8f3yb-1778943675890.png"
+            alt="Ads by Arief Logo"
+            width={120}
+            height={40}
+            className="h-10 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            priority={true}
           />
-          <span className="font-display font-800 text-base tracking-tight text-foreground hidden sm:block">
-            Ads by Arief
-          </span>
         </div>
 
         {/* Desktop Nav */}
