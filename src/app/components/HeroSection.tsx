@@ -107,7 +107,7 @@ export default function HeroSection() {
               <div className="flex items-center gap-4 mb-5">
                 <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-accent/30 shrink-0">
                   <AppImage
-                    src="https://img.rocket.new/generatedImages/rocket_gen_img_196d3ff14-1778788490114.png"
+                    src="https://img.rocket.new/generatedImages/rocket_gen_img_1630034b4-1772971826914.png"
                     alt="Arief, performance marketer Indonesia dengan background profesional"
                     width={56}
                     height={56}

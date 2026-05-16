@@ -54,7 +54,7 @@ const testimonials = [
   'CPAS strategy yang diterapkan Arief benar-benar berbeda. Tidak hanya soal angka, tapi juga edukasi strategi yang membuat tim internal kami makin paham tentang performance marketing.',
   platform: 'CPAS',
   roi: '14.31x ROI',
-  avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_15209ed8a-1772295357333.png",
+  avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_196cc122e-1763293462933.png",
   avatarAlt: 'Pria Indonesia usia 40 tahun dengan penampilan eksekutif pada latar abu-abu terang'
 }];
 

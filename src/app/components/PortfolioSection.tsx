@@ -19,7 +19,7 @@ interface CaseStudy {
   roiLabel?: string;
   masalahAwal: string;
   strategiSingkat: string;
-  achievements: { label: string; value: string }[];
+  achieve: string;
   beforeAfterRows: { label: string; before: string; after: string }[];
 }
 
@@ -36,16 +36,13 @@ const caseStudies: CaseStudy[] = [
     before: '300 Juta',
     after: '2.7 Miliar',
     roi: '8.69x',
-    masalahAwal: 'Brand abaya menghadapi stagnasi penjualan dengan iklan yang tidak terstruktur dan creative fatigue tinggi. Audiens tidak tersegmentasi dengan baik sehingga biaya per konversi membengkak.',
-    strategiSingkat: 'Restrukturisasi campaign dengan segmentasi audiens berbasis interest fashion muslim dan lookalike purchaser. Rotasi creative mingguan dengan 3 angle berbeda: lifestyle, testimoni, dan product showcase.',
-    achievements: [
-      { label: 'Revenue', value: '2.7 Miliar' },
-      { label: 'ROI', value: '8.69x' },
-      { label: 'Growth', value: '800%+' },
-    ],
+    masalahAwal: 'CPA (Cost per SKU order) tergolong cukup tinggi di angka Rp 54.891 dengan volume pesanan yang masih tertahan (1.231 orders). Toko kesulitan melakukan scale-up budget karena khawatir ROI akan semakin merosot atau boncos jika tidak dioptimasi.',
+    strategiSingkat: 'Melakukan creative testing secara intensif untuk menemukan winning video, memperbaiki struktur campaign GMV Max agar alokasi budget lebih efisien, menyeleksi target audiens yang lebih relevan untuk menekan CPA, lalu melakukan scaling budget secara agresif pada campaign yang terbukti menghasilkan ROI tinggi.',
+    achieve: 'Berhasil melakukan scale-up budget iklan hingga hampir 5x lipat dengan performa yang justru makin efisien. CPA berhasil ditekan turun hampir setengahnya (dari Rp 54.891 menjadi Rp 28.445). Pertumbuhan Gross Revenue meroket tajam lebih dari 9x lipat (dari Rp 301 Jutaan menjadi Rp 2,7 Miliar) dalam sebulan, diiringi dengan peningkatan pesanan tembus 11.128 orders dan ROI yang stabil di angka fantastis (8.69).',
     beforeAfterRows: [
-      { label: 'Revenue', before: '300 Juta', after: '2.7 Miliar' },
-      { label: 'ROI', before: 'Tidak Terukur', after: '8.69x' },
+      { label: 'Ad Spend', before: 'Rp 67.570.361', after: 'Rp 316.531.893' },
+      { label: 'Revenue', before: 'Rp 301.895.688', after: 'Rp 2.750.703.709' },
+      { label: 'ROI', before: '4.47', after: '8.69' },
     ],
   },
   {
@@ -60,16 +57,13 @@ const caseStudies: CaseStudy[] = [
     before: '0 (New Ads)',
     after: '1.06 Miliar',
     roi: '92.28x',
-    masalahAwal: 'Brand streetwear baru tanpa riwayat iklan sama sekali. Tidak ada data audiens, tidak ada pixel yang matang, dan kompetisi kategori sangat ketat di TikTok.',
-    strategiSingkat: 'Membangun struktur campaign dari nol dengan fase awareness → consideration → conversion. Memanfaatkan TikTok Spark Ads dari konten organik yang viral untuk menekan biaya akuisisi.',
-    achievements: [
-      { label: 'Revenue', value: '1.06 Miliar' },
-      { label: 'ROI', value: '92.28x' },
-      { label: 'Starting Point', value: 'Rp 0' },
-    ],
+    masalahAwal: 'Belum pernah ads dan baru mulai ads ketika saya handle.',
+    strategiSingkat: 'Membangun fondasi campaign dari nol dengan memanfaatkan fitur GMV Max untuk mendorong volume penjualan secara maksimal sejak awal. Fokus pada creative testing dengan konten video yang sangat relevan untuk audiens streetwear (seperti outfit ideas atau mix-and-match) guna memancing interaksi organik tinggi. Menggunakan strategi broad targeting di awal untuk memberikan keleluasaan pada algoritma TikTok mencari pembeli dengan Cost per Action (CPA) paling murah.',
+    achieve: 'Berhasil mencetak omset fantastis menembus Rp 1 Miliar (tepatnya Rp 1.063.649.482) pada bulan pertama menjalankan iklan dari nol. Tingkat efisiensi campaign sangat luar biasa, di mana dengan ad spend hanya sekitar Rp 11,5 Jutaan mampu menghasilkan ROI sebesar 92.28. CPA (Cost per SKU order) berhasil ditekan di angka yang sangat murah, yaitu Rp 501 per pesanan, dan mendatangkan total 23.008 pesanan masuk.',
     beforeAfterRows: [
-      { label: 'Revenue', before: 'Rp 0 (New)', after: '1.06 Miliar' },
-      { label: 'ROI', before: '-', after: '92.28x' },
+      { label: 'Ad Spend', before: 'Rp 0', after: 'Rp 11.526.056' },
+      { label: 'Revenue', before: 'Rp 0', after: 'Rp 1.063.649.482' },
+      { label: 'ROI', before: '0.00', after: '92.28' },
     ],
   },
   {
@@ -84,16 +78,13 @@ const caseStudies: CaseStudy[] = [
     before: '272 Juta',
     after: '5.8 Miliar',
     roi: '9.66x',
-    masalahAwal: 'Brand body care dengan spend yang sudah cukup besar namun ROI stagnan. Creative fatigue terjadi cepat dan tidak ada sistem pengujian yang terstruktur.',
-    strategiSingkat: 'Framework creative testing 3 angle/minggu, audience segmentation berbasis lookalike purchaser, dan alokasi budget dinamis ke ad set ROAS tertinggi setiap 3 hari.',
-    achievements: [
-      { label: 'Revenue', value: '5.8 Miliar' },
-      { label: 'ROI', value: '9.66x' },
-      { label: 'Revenue Growth', value: '2,032%' },
-    ],
+    masalahAwal: 'ROI stuck di kisaran 5 x, toko kesulitan melakukan scaling budget secara besar-besaran karena khawatir performa akan menurun dan CPA membengkak.',
+    strategiSingkat: 'Melakukan perombakan total pada creative video dengan menonjolkan angle yang spesifik untuk produk body care (seperti before-after, tekstur produk, dan honest review), memaksimalkan fase learning pada campaign GMV Max, serta melakukan scaling budget secara agresif dan berkala pada winning campaign sembari menekan Cost per Action (CPA).',
+    achieve: 'Berhasil melakukan scaling ad spend secara masif hingga lebih dari 11x lipat (dari Rp 51 Jutaan ke Rp 605 Jutaan) dengan performa yang justru semakin luar biasa. Gross Revenue meroket tajam menembus Rp 5,8 Miliar (naik 21x lipat dari sebelumnya Rp 272 Jutaan) hanya dalam waktu satu bulan. Selain itu, CPA berhasil ditekan turun setengahnya (dari Rp 10.844 menjadi Rp 5.892), mendatangkan total 102.748 pesanan, dan berhasil menggandakan ROI menjadi 9.66.',
     beforeAfterRows: [
-      { label: 'Revenue', before: '272 Juta', after: '5.8 Miliar' },
-      { label: 'ROI', before: 'Rendah', after: '9.66x' },
+      { label: 'Ad Spend', before: 'Rp 51.520.378', after: 'Rp 605.360.644' },
+      { label: 'Revenue', before: 'Rp 272.133.024', after: 'Rp 5.850.762.529' },
+      { label: 'ROI', before: '5.28', after: '9.66' },
     ],
   },
   {
@@ -107,16 +98,13 @@ const caseStudies: CaseStudy[] = [
     before: '477 Juta',
     after: '871 Juta',
     roi: '23.81x',
-    masalahAwal: 'Produk slime anak dengan musim penjualan yang fluktuatif. Iklan berjalan tanpa optimasi berkelanjutan sehingga ROI tidak konsisten.',
-    strategiSingkat: 'Optimasi campaign berbasis data musiman dengan creative yang menonjolkan fun factor dan unboxing experience. Retargeting agresif ke cart abandoner.',
-    achievements: [
-      { label: 'Revenue', value: '871 Juta' },
-      { label: 'ROI', value: '23.81x' },
-      { label: 'Revenue Growth', value: '83%' },
-    ],
+    masalahAwal: 'ROI masih di bawah 12x (tepatnya 10.99 pada bulan September), sedangkan target minimal yang ditetapkan ada di 14x.',
+    strategiSingkat: 'Melakukan efisiensi budget dengan mematikan campaign yang boncos atau kurang optimal. Fokus pada penyegaran creative video yang lebih eye-catching untuk target audiens anak-anak dan orang tua (misalnya: visual warna-warni, efek suara/ASMR slime, dan review seru). Selain itu, melakukan optimasi targeting pada GMV Max agar Cost per Action (CPA) bisa ditekan serendah mungkin untuk mendongkrak ROI.',
+    achieve: 'Berhasil melampaui target ROI secara signifikan hingga menyentuh angka fantastis 23.81 (jauh di atas target 14x). Sangat luar biasa karena efisiensi budget berhasil dilakukan (ad spend turun dari Rp 43 Jutaan menjadi Rp 36 Jutaan), namun Gross Revenue justru meroket hampir 2x lipat menembus Rp 871 Jutaan. CPA berhasil dipangkas lebih dari setengahnya (dari Rp 1.931 turun drastis menjadi Rp 976 per pesanan), dengan lonjakan volume pesanan mencapai 37.510 orders.',
     beforeAfterRows: [
-      { label: 'Revenue', before: '477 Juta', after: '871 Juta' },
-      { label: 'ROI', before: 'Tidak Stabil', after: '23.81x' },
+      { label: 'Ad Spend', before: 'Rp 43.438.356', after: 'Rp 36.608.443' },
+      { label: 'Revenue', before: 'Rp 477.474.523', after: 'Rp 871.785.418' },
+      { label: 'ROI', before: '10.99', after: '23.81' },
     ],
   },
   {
@@ -131,16 +119,13 @@ const caseStudies: CaseStudy[] = [
     before: '0 (New Store)',
     after: '42.5 Juta',
     roi: '7.06x',
-    masalahAwal: 'Toko baru tanpa riwayat penjualan dan reputasi. Tidak ada social proof dan kompetisi produk kecantikan di TikTok sangat tinggi.',
-    strategiSingkat: 'Membangun kepercayaan dengan UGC content dan testimoni awal. Campaign dijalankan dengan budget kecil namun highly targeted ke beauty enthusiast.',
-    achievements: [
-      { label: 'Revenue', value: '42.5 Juta' },
-      { label: 'ROI', value: '7.06x' },
-      { label: 'Starting Point', value: 'Toko Baru' },
-    ],
+    masalahAwal: 'Toko baru dan belum pernah iklan secara proper/optimal. Klien menetapkan target awal ROI di angka 3x.',
+    strategiSingkat: 'Karena toko masih sangat baru, fokus utama ada pada creative testing dengan angle video yang kuat untuk produk kecantikan (seperti before-after pemakaian eyelash, tutorial pemasangan, atau review ketahanan). Menggunakan campaign GMV Max dari awal untuk memaksimalkan machine learning TikTok dalam mencari audiens dengan intensi beli tinggi, lalu mulai melakukan scaling budget secara terukur setelah memvalidasi bahwa konversi mulai masuk dan ROI stabil di atas target.',
+    achieve: 'Peluncuran iklan pertama sukses besar dan berhasil melampaui target dari klien. Dengan modal iklan Rp 6 Jutaan, campaign mampu mencetak omset (Gross Revenue) hingga Rp 42,5 Juta di bulan pertamanya beriklan. Target ROI 3x terlampaui jauh hingga menyentuh angka 7.06, sekaligus sukses mendatangkan volume pesanan sebanyak 463 orders dengan Cost per Action (CPA) di Rp 13.033 per pesanan.',
     beforeAfterRows: [
-      { label: 'Revenue', before: 'Rp 0 (New)', after: '42.5 Juta' },
-      { label: 'ROI', before: '-', after: '7.06x' },
+      { label: 'Ad Spend', before: 'Rp 263', after: 'Rp 6.034.050' },
+      { label: 'Revenue', before: 'Rp 86.630', after: 'Rp 42.572.583' },
+      { label: 'ROI', before: '0', after: '7.06' },
     ],
   },
   {
@@ -155,16 +140,13 @@ const caseStudies: CaseStudy[] = [
     before: '0 (New Ads)',
     after: '369 Juta',
     roi: '13.01x',
-    masalahAwal: 'Brand FnB yang belum pernah beriklan secara digital. Produk belum dikenal dan tidak ada data audiens yang bisa dimanfaatkan.',
-    strategiSingkat: 'Kampanye awareness-first dengan konten video yang menonjolkan taste appeal dan lifestyle. Diikuti retargeting ke viewer 75% untuk konversi.',
-    achievements: [
-      { label: 'Revenue', value: '369 Juta' },
-      { label: 'ROI', value: '13.01x' },
-      { label: 'Starting Point', value: 'New Ads' },
-    ],
+    masalahAwal: 'Belum pernah beriklan (ads) sebelumnya dan baru mulai ads saat di-handle oleh saya, dengan klien menetapkan target ROI di angka 10x.',
+    strategiSingkat: 'Membangun campaign dari nol menggunakan objektif GMV Max untuk mempercepat penetrasi pasar dan mendorong konversi maksimal. Fokus pada pengujian creative video yang menggugah selera (appetizing) dengan menonjolkan visual kepedasan dan efek suara ASMR (crunchy) untuk memicu impulse buying pada audiens. Melakukan broad targeting pada fase awal untuk memberikan ruang pada algoritma mencari audiens paling relevan dengan Cost per Action (CPA) termurah, lalu melakukan scaling budget pada creative yang terbukti menghasilkan penjualan (winning creative).',
+    achieve: 'Peluncuran campaign iklan pertama sukses besar dan langsung melebihi ekspektasi. Hanya dalam waktu kurang dari satu bulan beriklan (19 April - 14 Mei 2026), berhasil mencetak omset (Gross Revenue) hingga Rp 369,4 Juta. Target ROI 10x berhasil dilampaui dengan nyaman hingga menyentuh angka 13.01. Selain itu, campaign ini sukses mendatangkan volume pesanan yang masif, yaitu 6.151 orders, dengan CPA yang sangat efisien di angka Rp 4.616 per pesanan.',
     beforeAfterRows: [
-      { label: 'Revenue', before: 'Rp 0 (New)', after: '369 Juta' },
-      { label: 'ROI', before: '-', after: '13.01x' },
+      { label: 'Ad Spend', before: 'Rp 0', after: 'Rp 28.393.378' },
+      { label: 'Revenue', before: 'Rp 0', after: 'Rp 369.499.024' },
+      { label: 'ROI', before: '0.00', after: '13.01' },
     ],
   },
   {
@@ -178,16 +160,13 @@ const caseStudies: CaseStudy[] = [
     before: '48 Juta',
     after: '247 Juta',
     roi: '13.14x',
-    masalahAwal: 'Brand fashion anak dengan penjualan stagnan. Iklan berjalan namun tidak ada strategi scaling yang jelas dan creative tidak diperbarui secara berkala.',
-    strategiSingkat: 'Refresh creative dengan angle parenting dan lifestyle keluarga. Scaling budget bertahap setelah menemukan winning ad set dengan ROAS konsisten di atas 10x.',
-    achievements: [
-      { label: 'Revenue', value: '247 Juta' },
-      { label: 'ROI', value: '13.14x' },
-      { label: 'Revenue Growth', value: '415%' },
-    ],
+    masalahAwal: 'target menjaga roas di atas 10 dengan kenaikan revenue.',
+    strategiSingkat: 'Melakukan scaling up budget secara terukur pada winning campaign GMV Max. Langkah ini dibarengi dengan penyegaran creative video (menonjolkan angle kenyamanan bahan pakaian atau inspirasi OOTD anak) agar Cost per Action (CPA) tidak ikut membengkak saat budget diperbesar.',
+    achieve: 'Sukses melakukan scale-up dengan hasil maksimal! Ad spend dinaikkan hingga 4x lipat (dari Rp 4,7 Juta menjadi Rp 18,8 Juta), dan omset berhasil melesat tajam 5x lipat menembus Rp 247,7 Juta. Target awal tercapai sempurna karena ROI tidak drop, melainkan justru meningkat dari 10.40 menjadi 13.14.',
     beforeAfterRows: [
-      { label: 'Revenue', before: '48 Juta', after: '247 Juta' },
-      { label: 'ROI', before: 'Rendah', after: '13.14x' },
+      { label: 'Ad Spend', before: 'Rp 4.705.140', after: 'Rp 18.846.922' },
+      { label: 'Revenue', before: 'Rp 48.919.709', after: 'Rp 247.710.691' },
+      { label: 'ROI', before: '10.40', after: '13.14' },
     ],
   },
   {
@@ -201,16 +180,13 @@ const caseStudies: CaseStudy[] = [
     before: '603 Juta',
     after: '1.62 Miliar',
     roi: '10.22x',
-    masalahAwal: 'Brand softlens dengan spend besar namun ROI tidak optimal. Audiens terlalu luas dan tidak ada diferensiasi creative antara cold dan warm audience.',
-    strategiSingkat: 'Segmentasi funnel ketat: cold audience dengan awareness creative, warm audience dengan product demo, dan hot audience dengan penawaran eksklusif. Optimasi bid strategy per segmen.',
-    achievements: [
-      { label: 'Revenue', value: '1.62 Miliar' },
-      { label: 'ROI', value: '10.22x' },
-      { label: 'Revenue Growth', value: '169%' },
-    ],
+    masalahAwal: 'target omset 1 miliar dengan roi di atas 10x.',
+    strategiSingkat: 'Melakukan scaling budget secara agresif pada campaign GMV Max yang potensial. Untuk mengimbangi budget yang diperbesar, dilakukan injeksi variasi creative video secara berkala (seperti try-on warna softlens untuk berbagai skin tone atau makeup look) guna memperluas jangkauan audiens sekaligus menjaga stabilitas CPA (Cost per Action).',
+    achieve: 'Target omset dan efisiensi sukses terlampaui! Berhasil menembus target 1 Miliar dengan meroketkan omset dari Rp 603 Jutaan menjadi Rp 1,62 Miliar. Walaupun pengeluaran iklan di-scale up hampir 4x lipat (dari Rp 41 Juta ke Rp 158 Juta), performa tetap terkendali dengan ROI yang berhasil dijaga di angka 10.22 (sesuai target di atas 10x) dan mendatangkan total pesanan masif sebanyak 15.953 orders.',
     beforeAfterRows: [
-      { label: 'Revenue', before: '603 Juta', after: '1.62 Miliar' },
-      { label: 'ROI', before: 'Sub-optimal', after: '10.22x' },
+      { label: 'Ad Spend', before: 'Rp 41.606.537', after: 'Rp 158.672.240' },
+      { label: 'Revenue', before: 'Rp 603.327.175', after: 'Rp 1.621.879.338' },
+      { label: 'ROI', before: '14.50', after: '10.22' },
     ],
   },
   // SHOPEE ADS
@@ -226,16 +202,13 @@ const caseStudies: CaseStudy[] = [
     after: 'ROAS 20.46',
     roi: '20.46',
     roiLabel: 'ROAS',
-    masalahAwal: 'ROAS Shopee Ads stagnan di angka 11.83 meskipun budget sudah cukup besar. Tidak ada optimasi keyword dan bidding strategy yang terstruktur.',
-    strategiSingkat: 'Audit menyeluruh keyword performance, eliminasi keyword tidak relevan, dan optimasi bid berbasis conversion rate. Penambahan produk bundle untuk meningkatkan AOV.',
-    achievements: [
-      { label: 'ROAS', value: '20.46' },
-      { label: 'Revenue', value: '838 Juta' },
-      { label: 'ROAS Growth', value: '+73%' },
-    ],
+    masalahAwal: 'ROAS masih dibawah 12x (tepatnya 11.83 pada bulan Desember), padahal target minimal di 14x.',
+    strategiSingkat: 'Melakukan audit dan restrukturisasi keyword (kata kunci) secara menyeluruh pada Iklan Pencarian. Mematikan keyword broad yang terbukti memakan biaya tinggi (boncos) tanpa konversi yang memadai. Mengalihkan dan memfokuskan budget pada keyword exact (spesifik) dengan intent pembelian tinggi yang relevan dengan produk slime anak. Selain itu, melakukan optimasi harga bid (bid adjustment) secara berkala untuk menjaga efisiensi Iklan Produk Serupa.',
+    achieve: 'Berhasil melakukan efisiensi pengeluaran iklan sekaligus memaksimalkan penjualan. Biaya iklan berhasil ditekan turun dari Rp 56,7 Juta menjadi Rp 41 Juta, namun omset dari iklan justru meningkat signifikan dari Rp 670,9 Juta menjadi Rp 838,5 Juta. Target ROAS berhasil terlampaui jauh, meroket dari 11.83 menjadi 20.46. Peningkatan performa ini juga dibarengi dengan kenaikan volume pesanan dari 22 ribu orders menjadi 25,1 ribu orders.',
     beforeAfterRows: [
+      { label: 'Ad Spend', before: 'Rp 56.700.000', after: 'Rp 41.000.000' },
+      { label: 'Revenue', before: 'Rp 670.900.000', after: 'Rp 838.500.000' },
       { label: 'ROAS', before: '11.83', after: '20.46' },
-      { label: 'Revenue', before: 'Lebih Rendah', after: '838 Juta' },
     ],
   },
   {
@@ -251,16 +224,13 @@ const caseStudies: CaseStudy[] = [
     after: 'ROAS 66.64',
     roi: '66.64',
     roiLabel: 'ROAS',
-    masalahAwal: 'Brand skincare dengan ROAS yang sudah baik namun belum dioptimalkan secara maksimal. Potensi scaling belum dieksplor karena takut ROAS turun.',
-    strategiSingkat: 'Analisis mendalam keyword dengan volume tinggi dan konversi tinggi. Strategi scaling bertahap dengan monitoring ketat setiap 48 jam untuk memastikan ROAS tetap optimal.',
-    achievements: [
-      { label: 'ROAS', value: '66.64' },
-      { label: 'Revenue', value: '900 Juta' },
-      { label: 'ROAS Growth', value: '+147%' },
-    ],
+    masalahAwal: 'target menjaga ROAS di atas 20 x',
+    strategiSingkat: 'Mengubah keyword boncos dari broad ke exact match pada Iklan Pencarian untuk mengincar pembeli potensial, serta optimasi bid Iklan Produk Serupa untuk merebut trafik kompetitor tanpa menambah budget harian.',
+    achieve: 'Efisiensi maksimal; dengan budget yang hampir sama (Rp 13 Jutaan), omset melesat 2,5x lipat dari Rp 360 Juta menjadi Rp 900,8 Juta. ROAS naik tajam menembus 66,64 (jauh melampaui target 20x), dan total pesanan naik dari 2.1k menjadi 5.1k orders.',
     beforeAfterRows: [
+      { label: 'Ad Spend', before: 'Rp 13.300.000', after: 'Rp 13.500.000' },
+      { label: 'Revenue', before: 'Rp 360.000.000', after: 'Rp 900.800.000' },
       { label: 'ROAS', before: '26.98', after: '66.64' },
-      { label: 'Revenue', before: 'Lebih Rendah', after: '900 Juta' },
     ],
   },
   {
@@ -273,15 +243,13 @@ const caseStudies: CaseStudy[] = [
     metricSub: 'Revenue 301 Juta',
     roi: '12.18',
     roiLabel: 'ROAS',
-    masalahAwal: 'Brand fashion pria dengan performa Shopee Ads yang belum teroptimasi. Keyword bidding tidak efisien dan banyak spend terbuang ke keyword tidak relevan.',
-    strategiSingkat: 'Restrukturisasi campaign dengan keyword research mendalam, negative keyword list, dan bid optimization berbasis data historis.',
-    achievements: [
-      { label: 'ROAS', value: '12.18' },
-      { label: 'Revenue', value: '301 Juta' },
-    ],
+    masalahAwal: 'target roas diatas 10x',
+    strategiSingkat: 'Melakukan seleksi keyword ketat (fokus pada exact match) di Iklan Pencarian untuk menjaring audiens berintensi beli tinggi, serta mengoptimalkan bid pada Iklan Produk Serupa untuk merebut trafik dari toko kompetitor secara efisien.',
+    achieve: 'Target sukses terlampaui! Dengan pengeluaran iklan sebesar Rp 24,8 Juta, campaign berhasil mencetak omset hingga Rp 301,6 Juta. ROAS sangat sehat dan stabil di angka 12,18 (melebihi target 10x), serta sukses mendatangkan 1.300 pesanan masuk.',
     beforeAfterRows: [
-      { label: 'ROAS', before: 'Sub-optimal', after: '12.18' },
-      { label: 'Revenue', before: '-', after: '301 Juta' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 24.800.000' },
+      { label: 'Revenue', before: '-', after: 'Rp 301.600.000' },
+      { label: 'ROAS', before: '-', after: '12.18' },
     ],
   },
   {
@@ -294,15 +262,13 @@ const caseStudies: CaseStudy[] = [
     metricSub: 'Revenue 626 Juta',
     roi: '10.34',
     roiLabel: 'ROAS',
-    masalahAwal: 'Segmen fashion pria dewasa dengan kompetisi tinggi. Iklan berjalan namun tidak ada diferensiasi strategi antara produk premium dan entry-level.',
-    strategiSingkat: 'Segmentasi campaign berdasarkan price tier produk. Produk premium dengan keyword branded, produk entry-level dengan keyword generic volume tinggi.',
-    achievements: [
-      { label: 'ROAS', value: '10.34' },
-      { label: 'Revenue', value: '626 Juta' },
-    ],
+    masalahAwal: 'target roas diatas 10x',
+    strategiSingkat: 'Memfokuskan budget pada kata kunci spesifik (exact match) di Iklan Pencarian yang relevan dengan produk pria dewasa, serta optimasi bid pada Iklan Produk Serupa untuk merebut trafik dari kompetitor secara efektif.',
+    achieve: 'Target sukses terlampaui! Dengan total pengeluaran iklan Rp 60,5 Juta, kampanye ini berhasil meraup omset hingga Rp 626 Juta. ROAS berhasil diamankan pada angka 10,34 (memenuhi target di atas 10x), dan sukses mendatangkan total 2.600 pesanan (2.6k orders).',
     beforeAfterRows: [
-      { label: 'ROAS', before: 'Tidak Optimal', after: '10.34' },
-      { label: 'Revenue', before: '-', after: '626 Juta' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 60.500.000' },
+      { label: 'Revenue', before: '-', after: 'Rp 626.000.000' },
+      { label: 'ROAS', before: '-', after: '10.34' },
     ],
   },
   {
@@ -315,15 +281,13 @@ const caseStudies: CaseStudy[] = [
     metricSub: 'Revenue 246 Juta',
     roi: '13.01',
     roiLabel: 'ROAS',
-    masalahAwal: 'Brand hair care dengan performa iklan yang fluktuatif. Tidak ada strategi keyword yang konsisten dan bid sering terlalu tinggi untuk keyword kompetitif.',
-    strategiSingkat: 'Audit keyword dan restrukturisasi bid strategy. Fokus pada long-tail keyword dengan intent tinggi dan kompetisi lebih rendah untuk efisiensi budget.',
-    achievements: [
-      { label: 'ROAS', value: '13.01' },
-      { label: 'Revenue', value: '246 Juta' },
-    ],
+    masalahAwal: 'target roas diatas 10x',
+    strategiSingkat: 'Mengoptimalkan Iklan Pencarian dengan fokus pada kata kunci spesifik (exact match) yang relevan untuk memangkas klik tidak berkualitas (menghindari boncos), dipadukan dengan optimasi bid pada Iklan Produk Serupa guna mengamankan trafik dari audiens kompetitor.',
+    achieve: 'Target sukses terlampaui! Dengan alokasi iklan Rp 19 Juta, campaign ini berhasil meraup omset hingga Rp 246,8 Juta. ROAS berhasil menembus angka 13,01 (dengan nyaman melampaui target 10x) dan sukses mendatangkan total pesanan sebanyak 1.300 (1.3k orders).',
     beforeAfterRows: [
-      { label: 'ROAS', before: 'Fluktuatif', after: '13.01' },
-      { label: 'Revenue', before: '-', after: '246 Juta' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 19.000.000' },
+      { label: 'Revenue', before: '-', after: 'Rp 246.800.000' },
+      { label: 'ROAS', before: '-', after: '13.01' },
     ],
   },
   // CPAS SHOPEE
@@ -337,15 +301,13 @@ const caseStudies: CaseStudy[] = [
     metricSub: 'Revenue 742 Juta',
     roi: '14.31',
     roiLabel: 'ROAS',
-    masalahAwal: 'Brand fashion pria belum memanfaatkan CPAS Shopee secara optimal. Iklan tidak terhubung langsung ke toko Shopee sehingga tracking konversi tidak akurat.',
-    strategiSingkat: 'Setup CPAS Shopee dengan integrasi penuh ke katalog produk. Optimasi audience targeting berbasis data pembeli Shopee dan lookalike dari customer existing.',
-    achievements: [
-      { label: 'ROAS', value: '14.31' },
-      { label: 'Revenue', value: '742 Juta' },
-    ],
+    masalahAwal: 'target roas diatas 10x',
+    strategiSingkat: 'Memaksimalkan Dynamic Product Ads (DPA) untuk retargeting pengunjung toko dan mengonversi puluhan ribu audiens (tepatnya 25.447 audiens) yang sudah masuk ke tahap Add to Cart (ATC), dikombinasikan dengan broad targeting untuk terus mendatangkan pembeli baru.',
+    achieve: 'Target terlampaui dengan sukses! Dengan alokasi ad spend sebesar Rp 51.853.014, campaign ini berhasil mencetak omset masif hingga Rp 742.012.386. ROAS rata-rata sangat stabil di angka 14.31 (jauh di atas target 10x) dan berhasil mendatangkan 3.330 konversi pesanan.',
     beforeAfterRows: [
-      { label: 'ROAS', before: 'Belum Optimal', after: '14.31' },
-      { label: 'Revenue', before: '-', after: '742 Juta' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 51.853.014' },
+      { label: 'Revenue', before: '-', after: 'Rp 742.012.386' },
+      { label: 'ROAS', before: '-', after: '14.31' },
     ],
   },
   {
@@ -358,15 +320,13 @@ const caseStudies: CaseStudy[] = [
     metricSub: 'Revenue 46 Juta',
     roi: '7.20',
     roiLabel: 'ROAS',
-    masalahAwal: 'Brand hair care baru di CPAS Shopee dengan data yang terbatas. Perlu membangun baseline performa sebelum bisa melakukan scaling.',
-    strategiSingkat: 'Fase learning intensif dengan budget terkontrol untuk mengumpulkan data konversi. Optimasi bertahap setelah data cukup untuk pengambilan keputusan.',
-    achievements: [
-      { label: 'ROAS', value: '7.20' },
-      { label: 'Revenue', value: '46 Juta' },
-    ],
+    masalahAwal: 'target roas diatas 5x',
+    strategiSingkat: 'Mengoptimalkan Dynamic Product Ads (DPA) dengan fokus pada taktik retargeting untuk menjangkau kembali audiens berpotensi tinggi, khususnya 7.429 audiens di tahap Content Views dan 1.299 audiens Add to Cart (ATC), guna mendorong penyelesaian transaksi.',
+    achieve: 'Target efisiensi berhasil terlampaui! ROAS rata-rata mencapai 7.20 (di atas target 5x). Dengan ad spend sebesar Rp 6,4 Jutaan, campaign ini sukses mencetak omset hingga Rp 46,7 Jutaan dan mendatangkan 262 pesanan, dengan Cost per Purchase (CPP) yang efisien di angka Rp 24.762.',
     beforeAfterRows: [
-      { label: 'ROAS', before: 'Fase Awal', after: '7.20' },
-      { label: 'Revenue', before: '-', after: '46 Juta' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 6.487.628' },
+      { label: 'Revenue', before: '-', after: 'Rp 46.713.716' },
+      { label: 'ROI', before: '-', after: '7.20' },
     ],
   },
   {
@@ -379,15 +339,13 @@ const caseStudies: CaseStudy[] = [
     metricSub: 'Revenue 140 Juta',
     roi: '17.23',
     roiLabel: 'ROAS',
-    masalahAwal: 'Brand sportswear wanita dengan potensi besar namun belum dieksplor melalui CPAS. Audiens yang tepat belum teridentifikasi dengan baik.',
-    strategiSingkat: 'Targeting berbasis interest olahraga dan fitness dikombinasikan dengan data pembeli Shopee kategori pakaian olahraga. Creative menonjolkan aktivitas dan lifestyle aktif.',
-    achievements: [
-      { label: 'ROAS', value: '17.23' },
-      { label: 'Revenue', value: '140 Juta' },
-    ],
+    masalahAwal: 'target roas diatas 15x',
+    strategiSingkat: 'Mengoptimalkan Dynamic Product Ads (DPA) dengan fokus retargeting secara agresif pada audiens berintensi beli tinggi, khususnya pada 3.826 audiens yang sudah berada di tahap Add to Cart (ATC), untuk segera menyelesaikan pembayaran (checkout).',
+    achieve: 'Target efisiensi sukses besar dan terlampaui! ROAS rata-rata menyentuh angka 17.23 (berhasil melampaui target 15x). Dengan alokasi pengeluaran iklan Rp 8,1 Jutaan, kampanye ini berhasil meraup omset hingga Rp 140,9 Jutaan serta mencetak 580 total pesanan dengan Cost Per Purchase (CPP) yang sangat efisien di angka Rp 14.111.',
     beforeAfterRows: [
-      { label: 'ROAS', before: 'Belum Dioptimasi', after: '17.23' },
-      { label: 'Revenue', before: '-', after: '140 Juta' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 8.184.114' },
+      { label: 'Revenue', before: '-', after: 'Rp 140.984.520' },
+      { label: 'ROI', before: '-', after: '17.23' },
     ],
   },
   {
@@ -400,15 +358,13 @@ const caseStudies: CaseStudy[] = [
     metricSub: 'Revenue 59.9 Juta',
     roi: '16.48',
     roiLabel: 'ROAS',
-    masalahAwal: 'Brand fashion wanita dengan kompetisi tinggi di Shopee. Perlu strategi CPAS yang tepat untuk bersaing dengan brand besar yang memiliki budget lebih besar.',
-    strategiSingkat: 'Fokus pada niche audience yang spesifik daripada bersaing di keyword generic. Memanfaatkan data behavioral Shopee untuk menemukan pembeli dengan intent tinggi.',
-    achievements: [
-      { label: 'ROAS', value: '16.48' },
-      { label: 'Revenue', value: '59.9 Juta' },
-    ],
+    masalahAwal: 'baru mulai untuk CPAS dan target roas di atas 10x',
+    strategiSingkat: 'Menggunakan Dynamic Product Ads (DPA) untuk mengoptimalkan katalog produk secara otomatis, dikombinasikan dengan strategi retargeting pengunjung toko dan broad targeting untuk menjaring konversi pembeli baru dengan biaya termurah.',
+    achieve: 'Target terlampaui sejak bulan pertama berjalan! Dengan budget Rp 3,6 Jutaan, campaign sukses mencetak omset hampir Rp 60 Juta. ROAS rata-rata mencapai angka fantastis 16.48 (jauh di atas target 10x) dan berhasil mendatangkan 301 pesanan.',
     beforeAfterRows: [
-      { label: 'ROAS', before: 'Tidak Efisien', after: '16.48' },
-      { label: 'Revenue', before: '-', after: '59.9 Juta' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 3.635.473' },
+      { label: 'Revenue', before: '-', after: 'Rp 59.903.717' },
+      { label: 'ROAS', before: '-', after: '16.48' },
     ],
   },
   // CPAS LAZADA
@@ -422,15 +378,13 @@ const caseStudies: CaseStudy[] = [
     metricSub: 'Revenue 103 Juta',
     roi: '14.52',
     roiLabel: 'ROAS',
-    masalahAwal: 'Brand fashion pria yang ingin mengekspansi ke Lazada melalui CPAS. Tidak ada pengalaman sebelumnya dengan platform Lazada dan ekosistem iklannya.',
-    strategiSingkat: 'Setup CPAS Lazada dari nol dengan integrasi katalog produk dan pixel tracking. Strategi audience mirroring dari data Shopee yang sudah matang.',
-    achievements: [
-      { label: 'ROAS', value: '14.52' },
-      { label: 'Revenue', value: '103 Juta' },
-    ],
+    masalahAwal: 'target roas diatas 10x',
+    strategiSingkat: 'Memanfaatkan fitur Dynamic Product Ads (DPA) terintegrasi Lazada untuk memfokuskan budget pada retargeting. Taktik ini menyasar audiens berpotensi tinggi, khususnya ratusan ribu audiens yang sudah ada di tahap Content Views dan ribuan audiens Add to Cart (ATC), agar segera menyelesaikan pembayaran.',
+    achieve: 'Target efisiensi berhasil terlampaui! Dengan pengeluaran iklan yang hemat sebesar Rp 7,1 Jutaan, campaign sukses mencetak omset hingga Rp 103,2 Jutaan. ROAS stabil di angka 14.52 (aman di atas target 10x) dan berhasil mendatangkan 470 konversi pesanan dengan Cost per Purchase (CPP) di kisaran Rp 15 ribuan saja.',
     beforeAfterRows: [
-      { label: 'ROAS', before: 'New Platform', after: '14.52' },
-      { label: 'Revenue', before: '-', after: '103 Juta' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 7.108.168' },
+      { label: 'Revenue', before: '-', after: 'Rp 103.206.878' },
+      { label: 'ROAS', before: '-', after: '14.52' },
     ],
   },
   // META ADS
@@ -444,17 +398,13 @@ const caseStudies: CaseStudy[] = [
     metricSub: 'CPL Rp 12.781',
     roi: '100 Juta/CS',
     roiLabel: 'Revenue/CS',
-    masalahAwal: 'Brand minuman herbal dengan model bisnis B2C via WhatsApp. Tidak ada sistem lead generation yang terstruktur dan CPL sangat tinggi dari iklan sebelumnya.',
-    strategiSingkat: 'Implementasi Click-to-WhatsApp (CTWA) campaign dengan creative yang menonjolkan manfaat kesehatan dan social proof. Optimasi audience berbasis data customer existing.',
-    achievements: [
-      { label: 'Total Leads', value: '10.355' },
-      { label: 'CPL', value: 'Rp 12.781' },
-      { label: 'Revenue/CS', value: '100 Juta' },
-    ],
+    masalahAwal: 'target Cost Per Lead dibawah 15 ribu , spend harian di 1,5 juta , CR 20%',
+    strategiSingkat: 'Fokus optimasi targeting dan creative CTWA untuk menyaring lead berkualitas tinggi, serta mengatur pacing budget harian di Rp 1,5 juta agar CPL tidak membengkak dan target Conversion Rate (CR) 20% lebih mudah dieksekusi CS.',
+    achieve: 'CPL sukses ditekan di angka Rp 12.781 (aman di bawah target 15 ribu) dengan total 10.355 leads. Kualitas lead sangat tertarget, terbukti dari pencapaian omset Rp 100 Juta yang berhasil di-closing hanya dengan mengandalkan 1 CS.',
     beforeAfterRows: [
-      { label: 'Leads', before: 'Tidak Terstruktur', after: '10.355 Leads' },
-      { label: 'CPL', before: 'Sangat Tinggi', after: 'Rp 12.781' },
-      { label: 'Revenue/CS', before: '-', after: '100 Juta' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 119.230.977' },
+      { label: 'Revenue', before: '-', after: 'Rp 100.000.000' },
+      { label: 'CPL', before: '-', after: 'Rp 12.781' },
     ],
   },
   {
@@ -467,17 +417,13 @@ const caseStudies: CaseStudy[] = [
     metricSub: 'CPL Rp 60k',
     roi: '360 Juta/bln',
     roiLabel: 'Monthly Spend',
-    masalahAwal: 'Brand susu herbal dengan landing page yang tidak dioptimasi. Conversion rate rendah dan CPL tinggi karena traffic tidak berkualitas.',
-    strategiSingkat: 'Optimasi landing page dengan copywriting berbasis pain point dan social proof kuat. A/B testing headline dan CTA untuk meningkatkan conversion rate secara signifikan.',
-    achievements: [
-      { label: 'CPL', value: 'Rp 60.000' },
-      { label: 'Closing Rate', value: '60%' },
-      { label: 'Monthly Spend', value: '360 Juta' },
-    ],
+    masalahAwal: 'objektif lead target CPL maks Rp90.000',
+    strategiSingkat: 'Melakukan testing konten dan audiens secara intensif. Menguji berbagai kombinasi creative iklan dan targeting untuk menemukan formula winning campaign yang mampu menyuplai lead dengan performa terbaik dan biaya termurah.',
+    achieve: 'Target efisiensi berhasil dicapai! Cost per Result (CPR/CPL) sukses ditekan di angka Rp 60.000 (jauh lebih murah dari batas maksimal Rp 90.000). Campaign mampu menyerap budget skala besar (Rp 360 Juta/bulan) secara stabil dengan kualitas lead yang sangat tertarget, dibuktikan dari tingginya closing rate yang mencapai 60% dengan rasio pembelian 1,5.',
     beforeAfterRows: [
-      { label: 'CPL', before: 'Sangat Tinggi', after: 'Rp 60.000' },
-      { label: 'Closing Rate', before: 'Rendah', after: '60%' },
-      { label: 'Monthly Spend', before: '-', after: '360 Juta' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 360.000.000 (daily Rp 12.000.000)' },
+      { label: 'Revenue', before: '-', after: 'Rp 486.000.000' },
+      { label: 'CPL', before: '-', after: 'Rp 60.000' },
     ],
   },
   {
@@ -491,17 +437,13 @@ const caseStudies: CaseStudy[] = [
     before: '2.5 Juta (Spend)',
     after: '350 Juta (Revenue)',
     roi: '140x',
-    masalahAwal: 'Bisnis konveksi yang mengandalkan referral dan belum pernah beriklan digital. Tidak ada sistem akuisisi pelanggan baru yang skalabel.',
-    strategiSingkat: 'CTWA campaign dengan targeting B2B: pemilik brand, reseller, dan event organizer. Creative menonjolkan kualitas produksi dan kapasitas produksi besar.',
-    achievements: [
-      { label: 'Spend', value: '2.5 Juta' },
-      { label: 'Revenue', value: '350 Juta' },
-      { label: 'CPL', value: 'Rp 9.343' },
-    ],
+    masalahAwal: 'objektif lead target CPL maks Rp 15.000 sekaligus butuh membangun branding bisnis di media digital.',
+    strategiSingkat: 'Melakukan testing audiens, memproduksi konten visual (foto dan video) yang relevan, mengoptimalkan copywriting iklan, dan aktif mengelola fanpage untuk meningkatkan interaksi.',
+    achieve: 'Target efisiensi berhasil! CPL (CPR) sukses ditekan ke angka Rp 9.343 (aman di bawah target maksimal). Dengan spend yang sangat efisien sebesar Rp 2,5 Juta, campaign ini berhasil menyumbang omzet hingga Rp 350 Juta.',
     beforeAfterRows: [
-      { label: 'Ad Spend', before: '-', after: '2.5 Juta' },
-      { label: 'Revenue', before: 'Dari Referral', after: '350 Juta' },
-      { label: 'CPL', before: 'Tidak Ada', after: 'Rp 9.343' },
+      { label: 'Ad Spend', before: '-', after: 'Rp 2.500.000' },
+      { label: 'Revenue', before: '-', after: 'Rp 350.000.000' },
+      { label: 'CPL', before: '-', after: 'Rp 9.343' },
     ],
   },
 ];
@@ -595,6 +537,7 @@ function Modal({ study, onClose }: { study: CaseStudy; onClose: () => void }) {
               </span>
             </div>
             <h3 className="text-xl font-black text-[#0F172A]">{study.title}</h3>
+            <p className="text-xs text-gray-400 mt-0.5">{study.platform}</p>
           </div>
           <button
             onClick={onClose}
@@ -609,14 +552,14 @@ function Modal({ study, onClose }: { study: CaseStudy; onClose: () => void }) {
         <div className="px-6 py-6 space-y-6">
           {/* Before vs After Table */}
           <div>
-            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Perbandingan Before vs After</h4>
+            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Perbandingan Data</h4>
             <div className="rounded-2xl overflow-hidden border border-gray-100">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-gray-50">
                     <th className="text-left px-4 py-3 font-semibold text-gray-500 text-xs">Metrik</th>
-                    <th className="text-left px-4 py-3 font-semibold text-gray-500 text-xs">Before</th>
-                    <th className="text-left px-4 py-3 font-semibold text-[#22C55E] text-xs">After ✓</th>
+                    <th className="text-left px-4 py-3 font-semibold text-gray-500 text-xs">Sebelum Handle</th>
+                    <th className="text-left px-4 py-3 font-semibold text-[#22C55E] text-xs">Saat Handle ✓</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -648,17 +591,12 @@ function Modal({ study, onClose }: { study: CaseStudy; onClose: () => void }) {
             </p>
           </div>
 
-          {/* Achievement Details */}
+          {/* Achieve */}
           <div>
-            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Achievement Details</h4>
-            <div className="grid grid-cols-3 gap-3">
-              {study.achievements.map((a, i) => (
-                <div key={i} className="bg-emerald-50 rounded-2xl p-4 text-center border border-emerald-100">
-                  <p className="text-lg font-black text-[#22C55E] leading-tight">{a.value}</p>
-                  <p className="text-[10px] text-gray-500 font-medium mt-1">{a.label}</p>
-                </div>
-              ))}
-            </div>
+            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Achieve</h4>
+            <p className="text-sm text-gray-600 leading-relaxed bg-emerald-50 rounded-xl px-4 py-3 border border-emerald-100">
+              {study.achieve}
+            </p>
           </div>
         </div>
       </div>
