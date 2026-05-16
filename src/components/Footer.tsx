@@ -1,5 +1,5 @@
 import React from 'react';
-import AppLogo from '@/components/ui/AppLogo';
+import AppImage from '@/components/ui/AppImage';
 
 const WA_LINK = 'https://wa.me/6285602298057';
 
@@ -10,15 +10,17 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Left: Brand */}
           <div className="flex items-center gap-3">
-            <AppLogo size={36} />
-            <div>
-              <span className="block font-display font-800 text-base tracking-tight text-foreground">
-                Ads by Arief
-              </span>
-              <span className="block text-xs text-muted-foreground mt-0.5">
-                Yogyakarta, Indonesia
-              </span>
-            </div>
+            <AppImage
+              src="/assets/images/Gemini_Generated_Image_f3ybd8f3ybd8f3yb-1778943675890.png"
+              alt="Ads by Arief Logo"
+              width={120}
+              height={40}
+              className="h-10 w-auto object-contain"
+              priority={false}
+            />
+            <span className="text-base font-bold text-foreground tracking-tight">
+              Ads by Arief
+            </span>
           </div>
 
           {/* Center links */}
