@@ -18,6 +18,9 @@ export default function Footer() {
               className="h-10 w-auto object-contain"
               priority={false}
             />
+            <span className="text-base font-bold text-foreground tracking-tight">
+              Ads by Arief
+            </span>
           </div>
 
           {/* Center links */}

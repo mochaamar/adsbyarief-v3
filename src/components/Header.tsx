@@ -49,6 +49,9 @@ export default function Header() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             priority={true}
           />
+          <span className="text-base font-bold text-foreground tracking-tight cursor-pointer hover:opacity-80 transition-opacity" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            Ads by Arief
+          </span>
         </div>
 
         {/* Desktop Nav */}
